@@ -15,6 +15,6 @@ typecheck:  ## Static type checks
 	uv run mypy src tests
 
 test:  ## Run the test suite with coverage
-	uv run pytest --cov=hybrid_rag --cov-report=term-missing
+	uv run pytest --cov=hybrid_rag --cov-report=term-missing --cov-fail-under=90
 
 check: lint typecheck test  ## Everything CI runs
